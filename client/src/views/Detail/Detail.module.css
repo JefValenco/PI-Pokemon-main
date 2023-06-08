@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap");
+
+.container {
+  padding-top: 3em;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
+}
+
+.box1 {
+  padding-left: 3em;
+}
+
+.box2 {
+  padding-left: 10em;
+  padding-top: 0.5em;
+  justify-content: center;
+}
+
+.Submmit {
+  background: #c0485a;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+
+  padding: 10px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.Submmit:hover {
+  background: #ffffff;
+  color: #c0485a;
+}
+
+.Submmit:disabled {
+  opacity: 0.5; /* reduce opacity to make it look disabled */
+  cursor: not-allowed; /* change cursor to indicate it's not clickable */
+  /* add any other styles to visually indicate it's disabled */
+}
+/* .img {
+  width: 95%;
+} */
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader:after {
+  background-color: rgb(249, 249, 32);
+  content: "";
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: coin-flip 8s cubic-bezier(0, 0.1, 0.1, 0.6) infinite;
+}
+
+@keyframes coin-flip {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+
+.label {
+  background: #c0485a;
+  border: none;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border-radius: 25px;
+  outline: none;
+  padding: 5px 15px;
+  margin: 5px;
+  width: 110px;
+}
+
+.input3 {
+  background: #ffffff;
+  color: #000000;
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  border-radius: 25px;
+  margin: 10px;
+  width: 310px;
+}
+
+.img {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border-radius: 25px;
+  outline: none;
+
+  margin: 5px;
+  width: 300px;
+  height: auto;
+}
+
+.img2 {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border-radius: 25px;
+  outline: none;
+
+  margin: 5px;
+  width: 300px;
+  height: auto;
+}
+
+.img3 {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  border-radius: 25px;
+  outline: none;
+  padding-top: 0em;
+
+  margin: 5px;
+  width: 180px;
+  height: auto;
+}
