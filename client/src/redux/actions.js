@@ -16,7 +16,7 @@ export const GET_NOT_FOUND = "GET_NOT_FOUND";
 export function getPokemons() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3003/pokemon`);
+      const response = await axios.get(`/pokemon`);
       console.log("Response data:", response.data);
       dispatch({ type: GET_POKEMONS, payload: response.data });
     } catch (error) {
@@ -28,7 +28,7 @@ export function getPokemons() {
 export function getType() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3003/type`);
+      const response = await axios.get(`/type`);
       console.log("Response data:", response.data);
       dispatch({ type: GET_TYPE, payload: response.data });
     } catch (error) {
@@ -40,7 +40,7 @@ export function getType() {
 export function getDeletePokemons() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3003/pokemon`);
+      const response = await axios.get(`/pokemon`);
       const createdDogs = response.data.filter((dog) => dog.create);
       dispatch({ type: GET_DELETE_POKEMONS, payload: createdDogs });
     } catch (error) {
@@ -52,7 +52,7 @@ export function getDeletePokemons() {
 export function getItemById(id) {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3003/pokemon/${id}`);
+      const response = await axios.get(`/pokemon/${id}`);
       dispatch({ type: GET_ITEM_BY_ID, payload: response.data });
     } catch (error) {
       dispatch({ type: GET_ITEM_BY_ID, payload: null });
@@ -63,9 +63,7 @@ export function getItemById(id) {
 export function getItemByName(payload) {
   return async function (dispatch) {
     try {
-      let response = await axios.get(
-        `http://localhost:3003/pokemon?name=` + payload
-      );
+      let response = await axios.get(`/pokemon?name=` + payload);
       return dispatch({
         type: GET_ITEM_BY_NAME,
         payload: response.data,
@@ -86,7 +84,7 @@ export function clearSearch() {
 export function getModifyPokemons() {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3003/pokemon`);
+      const response = await axios.get(`/pokemon`);
       const createdDogs = response.data.filter((dog) => dog.create);
       dispatch({ type: GET_MODIFY_POKEMONS, payload: createdDogs });
     } catch (error) {

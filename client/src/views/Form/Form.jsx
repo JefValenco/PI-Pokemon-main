@@ -123,7 +123,7 @@ const Form = () => {
     }
 
     axios
-      .post("http://localhost:3003/pokemon", form)
+      .post("/pokemon", form)
       .then((res) => {
         alert("Pokemon created!");
         resetForm();
@@ -135,7 +135,7 @@ const Form = () => {
   const submitHandlerDelete = (event) => {
     event.preventDefault();
     axios
-      .delete(`http://localhost:3003/pokemon?name=${formDelete.name}`)
+      .delete(`/pokemon?name=${formDelete.name}`)
       .then((res) => {
         alert("Pokemon deleted!");
         resetFormDelete();

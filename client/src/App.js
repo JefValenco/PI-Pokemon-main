@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import { Home, Detail, Form, Landing, Modify } from "../src/views/index";
 import NavBar from "./components/NavBar/NavBar";
 import NotFound from "./views/NotFound/NotFound";
+import axios from "axios";
+axios.defaults.baseURL = "https://deploy-pokemon.onrender.com";
 
 function App() {
   const location = useLocation();

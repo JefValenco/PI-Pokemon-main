@@ -125,7 +125,7 @@ const Modify = () => {
 
     // Send formModify data to server
     axios
-      .put("http://localhost:3003/pokemon", formModify)
+      .put("/pokemon", formModify)
       .then((res) => {
         alert("Pokemon updated!");
         resetFormModify();
